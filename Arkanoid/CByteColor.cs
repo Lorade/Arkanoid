@@ -12,5 +12,12 @@ namespace Arkanoid
         {
         
         }
+
+        private enum Colors
+        {
+            Red,
+            Green,
+            Blue
+        }
     }
 }
