@@ -9,7 +9,7 @@ namespace Arkanoid
     {
         static void Main(string[] args)
         {
-
+        
         }
     }
 }
