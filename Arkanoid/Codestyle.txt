@@ -1,0 +1,139 @@
+﻿
+								Code Aufbau und Design
+
+
+0) Klassen, Variablen, Strukturen, Methoden, Funktionen, Interfaces SINNVOLL benennen
+
+
+1) Variablen in Klassen mit dem Anfangsbuchstaben "m" und danach im UpperCamelCase weiter. 
+
+	BSP: int mPlayerLifePoints
+
+2) Kommentare 
+
+	Einzelzeilig mit "//" statt "/*" und "*/"
+
+	Jede Methode / Funktion sollte ein Kommentar besitzen, welches kurz die Funktion beschreibt. Dieses Kommentar über die Funktion schreiben. 
+
+	BSP: //Das ist ein Kommentar
+
+3) Dateibenennung (Projektmappen-Explorer)
+
+	Name der Klasse / Struktur / Interface + vorangestelltem Typenkürzel
+
+		 Typenkürzel:
+
+		Interface = [I]
+		Klasse    = [C]
+		Struct    = [S]
+
+4) Programmmodularität (Aufteilung in Klassen und Dateien)
+
+	Jede Klasse / Struct / Interface bekommt eine eigene .cs Datei
+
+5) Einrückung und Klammersetzung
+
+	Klammersetzung nach C# anstelle von Java
+
+	BSP:
+
+		private void myMethod(int param1)
+		{
+			...
+		}
+
+	Einrückung nach Verschachtelung 
+
+	BSP:
+
+		if (mGameStarted == true)
+		{
+			if (mPlayerAlive == true)
+			{
+				Console.WriteLine("Spieler am Leben")
+			}
+		}
+
+6) Sichtbarkeiten und Typenzugriffe
+
+	Variablen immer "private" setzten. Bei benötigtem Zugriff außerhalb der Klasse mit Get und Set Eigenschaften Arbeiten
+	
+	BSP:
+	
+		private int mZahl;
+		
+		public Zahl
+		{
+			get	
+			{
+				return this.mZahl;
+			}
+
+			set
+			{
+				this.mZahl = value;
+			}
+		}
+
+7) Abkürzungen
+
+	IF-Abfragen und Schleifen komplett schreiben
+
+	BSP:
+
+				 Richtig
+
+		if (mPlayerAlive == true)
+		{
+			...
+		}
+
+				 Falsch
+
+		if (mPlayerAlive)
+		{
+			...
+		}
+
+8) Regionen
+
+	Regionen zur Schachtelung von Unwichtigen Deklarationen verwenden (KONSTRUKTOREN)
+
+	BSP:
+
+	#region NAME
+		Spieler = new Player("Spieler1")
+	#endregion
+
+
+9) Deklarationen von Variablen
+
+	Variablen immer so lokal wie möglich Erstellen.
+
+	BSP:
+
+			   Richtig
+
+	class Klasse
+	{
+		private void ToString()
+		{
+			private string Text;
+		}
+	}
+
+			   Falsch
+
+	class Klasse
+	{
+
+		private string Text; 
+
+		private void ToString()
+		{
+
+		}
+	}
+
+
+
