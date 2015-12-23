@@ -8,10 +8,10 @@ namespace Arkanoid
    {
         //Deklaration
 
-        private byte mRed;
-        private byte mGreen;
-        private byte mBlue;
-        private byte mAlpha;
+        private byte mRed; //Rotanteil
+        private byte mGreen; //Grünanteil
+        private byte mBlue; //Blauanteil
+        private byte mAlpha; //Transparenz
 
         //Allgemeiner Konstruktor
 
